@@ -17,7 +17,6 @@ body {
     /* row / column */
     /* grid-template: 1px repeat(2, 1fr) / 50px repeat(4, 1fr) 50px; */
     grid-template-columns: 50px repeat(4, 1fr) 50px;
-    
 }
 
 .card-1 {
@@ -136,15 +135,49 @@ body {
 /** ATTRIBUTION */
 
 .attribution { 
-    font-size: 11px; 
-    text-align: center; 
+    bottom: -95px;
+    position: absolute;
+
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    color: hsl(219, 29%, 14%);
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    font-weight: 700;
+    text-decoration: none;
+    color: hsl(263, 55%, 52%);
 }
 
-/* 
-    box shadow in card.
-    Responsive web.
-*/
+/** RESPONSIVE WEB */
+@media only screen and (max-width: 64em) {
+    .container {
+        grid-gap: 30px;
+        transform: scale(1);
+        grid-template-columns: 20px repeat(2, 1fr) 20px;
+        /* grid-template-rows: 20px repeat(8, 1fr) 20px; */
+        /* grid-template: 20px repeat(8, 1fr) 20px / 20px repeat(2, 1fr) 20px; */
+    }
+    
+    .card-1 {
+        grid-area: 2 / 2 / 4 / 4; /* row-start / column-start / row-end / column-end */
+    }
+    
+    .card-2 {
+        grid-area: 4 / 2 / 5 / 4;
+    }
+    
+    .card-3 {
+        grid-area: 5 / 2 / 6 / 4;
+    }
+    
+    .card-4 {
+        grid-area: 6 / 2 / 8 / 4;
+    }
+    
+    .card-5 {
+        grid-area: 8 / 2 / 10 / 4;
+    }
+}
