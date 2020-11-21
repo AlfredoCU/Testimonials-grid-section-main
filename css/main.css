@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+/** BODY */
+
+body {
+    font-size: 15px;
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+/** GRID */
+
+.container {
+    display: grid;
+    grid-gap: 26px 30px;
+    transform: scale(0.8);
+    /* row / column */
+    /* grid-template: 1px repeat(2, 1fr) / 50px repeat(4, 1fr) 50px; */
+    grid-template-columns: 50px repeat(4, 1fr) 50px;
+    
+}
+
+.card-1 {
+    grid-area: 2 / 2 / 3 / 4;  /* row-start / column-start / row-end / column-end */
+    background-color: hsl(263, 55%, 52%);
+}
+
+.card-2 {
+    grid-area: 2 / 4 / 3 / 5;
+    background-color: hsl(217, 19%, 35%);
+}
+
+.card-3 {
+    grid-area: 3 / 2 / 4 / 3;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.card-4 {
+    grid-area: 3 / 3 / 4 / 5;
+    background-color: hsl(219, 29%, 14%);
+}
+
+.card-5 {
+    grid-area: 2 / 5 / 4 / 6;
+    background-color: hsl(0, 0%, 100%);
+}
+
+/** CARD */
+
+.card {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 20px 30px 50px -25px hsl(0, 0%, 81%)
+}
+
+/** CARD HEADER */
+
+.card_content-user {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card__img-user {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.border-1 {
+    border: 3px solid #A775F1;
+}
+
+.border-2 {
+    border: 3px solid hsl(217, 19%, 35%);
+}
+
+.border-3 {
+    border: 3px solid hsl(263, 55%, 52%);
+}
+
+.card__name {
+    margin: 0px 20px 3px;
+    color: hsl(210, 46%, 95%);
+}
+
+.card__Verified {
+    opacity: 50%;
+    font-size: 13px;
+    margin: 0px 20px;
+    color: hsl(210, 46%, 95%);
+}
+
+/** CARD BODY */
+
+.card__content-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card__title {
+    z-index: 1000;
+    font-weight: 600;
+    line-height: 30px;
+    position: relative;
+    color: hsl(210, 46%, 95%);
+}
+
+.card__comment {
+    opacity: 70%;
+    font-weight: 500;
+    line-height: 25px;
+    color: hsl(210, 46%, 95%);
+}
+
+.color-1 {
+    color: hsl(219, 29%, 14%);
+}
+
+/** IMAGE QUOTATION */
+
+.card__quotation {
+    position: relative;
+}
+
+.card__img-quotation {
+    left: 65%;
+    top: -72px;
+    width: 130px;
+    position: absolute;
+}
+
+/** ATTRIBUTION */
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* 
+    box shadow in card.
+    Responsive web.
+*/
